@@ -1,0 +1,7 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='main'>
+<view>
+<image src="../../images/coupon1.jpg"></image>
+<image src="../../images/coupon2.jpg"></image>
+</view>
+</view>

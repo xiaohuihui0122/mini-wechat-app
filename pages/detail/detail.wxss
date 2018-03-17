@@ -1,0 +1,73 @@
+/* pages/detail/detail.wxss */
+.itemDetails{
+  width:40%;
+  height:320rpx;
+  float:left;
+  text-align: center;
+  padding-top:20rpx;
+}
+.itemView{
+  position:relative;
+  width:100%;
+  height:700rpx;
+}
+.itemView>image{
+  width: 100%;
+  height:450rpx;
+}
+.fname{
+  color:#B9DABE;
+  float: left;
+  margin-left:100rpx;
+  font-size: 48rpx;
+  white-space:nowrap;
+}
+.count{
+  position: absolute;
+  top:580rpx;
+  right:100rpx;
+}
+.minus,.add,.num{
+  display: inline-block;
+  text-align: center;
+  margin:0 10rpx;
+}
+.minus,.add{
+  background: #ddd;
+  width:50rpx;
+  border-radius: 5rpx;
+}
+.itemPrice{
+  color:#FA9603;
+  line-height: 150rpx;
+  margin-left: 20rpx; 
+  font-weight: bold;
+}
+.cart{
+  width:70rpx;
+  height:70rpx;
+  position: absolute;
+  top:15rpx;
+  right:200rpx;
+}
+.tabbar{
+  width:100%;
+  height:100rpx;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background: #B9DABE;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.tabbar text{
+  color:#fff;
+  line-height: 100rpx;
+}
+.evaluate{
+  position: relative;
+}
+.evaluate text{
+  position: absolute;
+  left:50rpx;
+}

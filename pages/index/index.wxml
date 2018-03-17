@@ -1,0 +1,125 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" bindscrolltolower="getMore" style="position:absolute; top:0; left:0; right:0; bottom:0">
+  <view class="swiper-container">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.picUrl}}" class="img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="dots">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class="navbar">
+    <navigator url="../bespeak/bespeak" open-type="navigate">
+      <image src="../../images/nav3.png"></image>
+      <text>预约</text>
+    </navigator>
+    <navigator url="../map/map" open-type="navigate">
+      <image src="../../images/nav1.png"></image>
+      <text>活动</text>
+    </navigator>
+    <navigator url="../map/map" open-type="navigate">
+      <image src="../../images/nav2.png"></image>
+      <text>留言</text>
+    </navigator>
+  </view>
+  <view class="coupon">
+    <image src="../../images/coupon1.jpg" mode="widthFix" bindtap='getCoupon'></image>
+    <image src="../../images/coupon2.jpg" mode="widthFix" bindtap='getCoupon'></image>
+  </view>
+  <view class="items-list">
+    <block wx:for="{{sidebaritems}}" wx:for-index="idx" wx:key="unique">
+      <rich-text class="sidebar{{idx == sidebarCurrent ? ' current' : ''}}" data-index="{{idx}}" bindtap='sidebarEvent'>{{item.name}}</rich-text>
+    </block>
+    <view class="item-content">
+      <view id="content1" class="{{sidebarCurrent==0 ? ' current' : ''}}">
+        <view wx:for="{{record.food}}" class="itemView" wx:for-index="idx" wx:key="unique">
+          <image src="{{item.img}}" class="itemImg" bindtap='goDetail' data-fid="{{item.id}}"></image>
+          <view class="itemDetails">
+            <text class="fname" bindtap='goDetail' data-fid="{{item.id}}">{{item.fname}}</text>
+            <view class="count">
+              <rich-text class="minus" bindtap="minus" data-index="{{idx}}" data-fid="{{item.id}}">-</rich-text>
+              <text class="num">{{countArr[item.id]}}</text>
+              <rich-text class="add" bindtap="add" data-index="{{idx}}" data-fid="{{item.id}}">+</rich-text>
+            </view>
+            <text class="itemPrice">￥{{item.price}}</text>
+            <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view id="content2" class="{{sidebarCurrent==1 ? ' current' : ''}}">
+        <view wx:for="{{record.cake}}" class="itemView" wx:for-index="idx" wx:key="unique">
+          <image src="{{item.img}}" class="itemImg" bindtap='goDetail' data-fid="{{item.id}}"></image>
+          <view class="itemDetails">
+            <text class="fname" bindtap='goDetail' data-fid="{{item.id}}">{{item.fname}}</text>
+            <view class="count">
+              <rich-text class="minus" bindtap="minus" data-index="{{idx}}" data-fid="{{item.id}}">-</rich-text>
+              <text class="num">{{countArr[item.id]}}</text>
+              <rich-text class="add" bindtap="add" data-index="{{idx}}" data-fid="{{item.id}}">+</rich-text>
+            </view>
+            <text class="itemPrice">￥{{item.price}}</text>
+            <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view id="content3" class="{{sidebarCurrent==2 ? ' current' : ''}}">
+        <view wx:for="{{record.coffee}}" class="itemView" wx:for-index="idx" wx:key="unique">
+          <image src="{{item.img}}" class="itemImg" bindtap='goDetail' data-fid="{{item.id}}"></image>
+          <view class="itemDetails">
+            <text class="fname" bindtap='goDetail' data-fid="{{item.id}}">{{item.fname}}</text>
+            <view class="count">
+              <rich-text class="minus" bindtap="minus" data-index="{{idx}}" data-fid="{{item.id}}">-</rich-text>
+              <text class="num">{{countArr[item.id]}}</text>
+              <rich-text class="add" bindtap="add" data-index="{{idx}}" data-fid="{{item.id}}">+</rich-text>
+            </view>
+            <text class="itemPrice">￥{{item.price}}</text>
+            <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view id="content4" class="{{sidebarCurrent==3 ? ' current' : ''}}">
+        <view wx:for="{{record.snacks}}" class="itemView" wx:for-index="idx" wx:key="unique">
+          <image src="{{item.img}}" class="itemImg" bindtap='goDetail' data-fid="{{item.id}}"></image>
+          <view class="itemDetails">
+            <text class="fname" bindtap='goDetail' data-fid="{{item.id}}">{{item.fname}}</text>
+            <view class="count">
+              <rich-text class="minus" bindtap="minus" data-index="{{idx}}" data-fid="{{item.id}}">-</rich-text>
+              <text class="num">{{countArr[item.id]}}</text>
+              <rich-text class="add" bindtap="add" data-index="{{idx}}" data-fid="{{item.id}}">+</rich-text>
+            </view>
+            <text class="itemPrice">￥{{item.price}}</text>
+            <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view id="content5" class="{{sidebarCurrent==4 ? ' current' : ''}}">
+        <view wx:for="{{record.package}}" class="itemView" wx:for-index="idx" wx:key="unique">
+          <image src="{{item.img}}" class="itemImg" bindtap='goDetail' data-fid="{{item.id}}"></image>
+          <view class="itemDetails">
+            <text class="fname" bindtap='goDetail' data-fid="{{item.id}}">{{item.fname}}</text>
+            <view class="count">
+              <rich-text class="minus" bindtap="minus" data-index="{{idx}}" data-fid="{{item.id}}">-</rich-text>
+              <text class="num">{{countArr[item.id]}}</text>
+              <rich-text class="add" bindtap="add" data-index="{{idx}}" data-fid="{{item.id}}">+</rich-text>
+            </view>
+            <text class="itemPrice">￥{{item.price}}</text>
+            <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="widget-goTop" bindtap="goTop" wx:if="{{ floorstatus }}">
+    <view class="gotop-wrap">
+      <view class="icon icon-top"></view>
+      <text>顶部</text>
+    </view>
+  </view>
+
+</scroll-view>

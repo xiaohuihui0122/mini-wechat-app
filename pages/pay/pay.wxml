@@ -1,0 +1,40 @@
+<view class="main">
+  <view class="addr">
+    <view class="currentAddr">
+      <image src="../../images/location.png"></image>
+      <view>
+        <text>收货人：{{addrList[dft].uname}}</text>
+        <text>{{addrList[dft].phone}}\n</text>
+        <text>收货地址：{{addrList[dft].province+addrList[dft].city+addrList[dft].area+addrList[dft].address}}</text>
+      </view>
+      <image src="../../images/more.png" bindtap='chooseAddr'></image>
+    </view>
+    <view class="chooseAddr" wx:if="{{showAddr}}">
+      <view class="addList">
+        <view wx:for="{{addrList}}" data-index="{{index}}" wx:key="unique" bindtap='dftAddr'>
+          <text data-index="{{index}}" bindtap='dftAddr'>{{item.uname}}</text>
+          <text data-index="{{index}}" bindtap='dftAddr'>{{item.phone}}\n</text>
+          <text data-index="{{index}}" bindtap='dftAddr'>{{item.province+item.city+item.area+item.address}}</text>
+        </view>
+        <button bindtap='addAddr'>+ 添加地址</button>
+      </view>
+    </view>
+  </view>
+  <view class="itemList">
+    <view class="saleItem" wx:for="{{itemList}}" wx:for-index="idx" wx:key="unique">
+      <image src="{{item.img}}" class="img"></image>
+      <text class="title">{{item.fname}}</text>
+      <text class="price">￥{{item.price}} X {{item.count}}</text>
+    </view>
+  </view>
+  <view class="orderInfo">
+    备注：
+    <input></input>
+    <text>共{{n}}件物品 小计：￥{{total}}元\n</text>
+    <text>配送费：￥10.00元</text>
+  </view>
+  <view class="tabbar">
+    <text>合计金额：￥{{total-0+10}}元</text>
+    <button>确认订单</button>
+  </view>
+</view>

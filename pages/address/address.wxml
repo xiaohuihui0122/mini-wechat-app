@@ -1,0 +1,29 @@
+<!--pages/address/address.wxml-->
+<scroll-view scroll-y="{{!isShow}}" style="position:absolute; top:0; left:0; right:0; bottom:0">
+  <view class="main">
+    <view>
+      <button bindtap="addAddr">+ 添加地址</button>
+    </view>
+    <view class="addList" wx:for="{{addrList}}" wx:for-index="idx" wx:key="unique">
+      <view >
+        <text>{{item.uname}}</text>
+        <text>{{item.phone}}\n</text>
+        <text>{{item.province+item.city+item.area+item.address}}</text>
+      </view>
+      <rich-text class="btn" style="border-right:1px solid #f6f6f6" bindtap="delAddr" data-aid="{{item.aid}}">删除</rich-text>
+      <rich-text class="btn" data-aid="{{item.aid}}" bindtap="editAddr">编辑</rich-text>
+    </view>
+  </view>
+    <view class="dim" wx:if="{{isShow}}">
+    <view>
+      姓名：
+      <input></input>
+      手机号：
+      <input></input>
+      地址：
+      <input></input>
+      <button class="btn">确定</button>
+      <button class="btn" bindtap="cancelEvent">取消</button>
+    </view>
+  </view>  
+</scroll-view>

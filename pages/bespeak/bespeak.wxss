@@ -1,0 +1,69 @@
+/* pages/bespeak/bespeak.wxss */
+.main{
+  margin:30rpx 0;
+}
+#panel{
+  height:39vh; 
+  background:#fff;
+  border-top:1rpx solid #ddd;
+}
+.dateList>view{
+  border:1rpx solid #ddd;
+  width:50%;
+  box-sizing: border-box;
+  line-height: 13vh;
+  text-align: center;  
+}
+.flex-row{
+  width:33.3%;
+  height: 13vh;
+  line-height: 13vh;
+  text-align: center;
+  box-sizing: border-box;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.flex-column{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+}
+
+.current{
+  background:#B9DABE;
+}
+.current>text{
+  color:#fff;
+}
+.on{
+  border:1px solid #B9DABE;
+}
+#panel>view{
+  position: relative;
+}
+.triangle>image{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  top:0;
+  right:0;
+}
+.chooseTitle{
+font-size:18px;
+line-height: 30px;
+color:#FA9603;
+}
+
+.flex-cell{
+  flex: 1;
+}
+.getCode{
+  width:70%;
+  margin-left:15% !important;
+}
+.btn{
+  margin:100rpx 0;
+  background: #B9DABE;
+  color:#fff;
+}

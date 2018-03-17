@@ -1,0 +1,5 @@
+/* pages/coupon/coupon.wxss */
+image{
+  width:50%;
+  height:200rpx;
+}

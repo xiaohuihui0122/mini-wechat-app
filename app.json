@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/seller/seller",
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/cart/cart",
+    "pages/map/map",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/coupon/coupon",
+    "pages/bespeak/bespeak",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B9DABE",
+    "navigationBarTitleText": "自助点餐模版",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7B7B7C",
+    "backgroundColor": "#B9DABE",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/111.png",
+        "iconPath": "images/11.png",
+        "pagePath": "pages/index/index",
+        "text": "首 页"
+      },
+      {
+        "selectedIconPath": "images/666.png",
+        "iconPath": "images/66.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购 物 车"
+      },
+      {
+        "selectedIconPath": "images/555.png",
+        "iconPath": "images/55.png",
+        "pagePath": "pages/seller/seller",
+        "text": "商 家"
+      },
+      {
+        "selectedIconPath": "images/444.png",
+        "iconPath": "images/44.png",
+        "pagePath": "pages/home/home",
+        "text": "我 的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+<!--pages/seller/seller.wxml-->
+<view class="main">
+<text class="title">欢迎光临XXXXXX</text>
+<text class="detail">
+<text class="subtitle">企业宗旨：</text>传承川湘文化精髓，发扬融合、创新思想，引领现代川菜新潮流。
+大蓉和是一家以经营新派特色川湘菜为主的大众化消费餐饮企业。我们以川菜为根基，兼容湘、粤、赣及杭帮菜，集各家之所长，创新出产出“混血儿”式的大融合菜品，赋予了餐饮业新的生命力，成为成都市主流餐饮企业之一。
+</text>
+<text><text class="subtitle">联系电话 : </text>010-00000000\n</text>
+<text><text class="subtitle">地址 : </text>北京市XXXXXXXXXXX</text>
+</view>
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14"   markers="{{markers}}" bindmarkertap="markertap"  show-location style="width: 100%; height: 500rpx;margin:30rpx 0"></map>

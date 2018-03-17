@@ -1,0 +1,20 @@
+<!--pages/detail/detail.wxml-->
+<view class="itemView">
+  <image src="{{record.img}}"></image>
+  <view class="itemDetails">
+    <text class="fname" bindtap='goDetail' data-fid="{{record.id}}">{{record.fname}}</text>
+    <view class="count">
+      <rich-text class="minus" bindtap="minus" data-fid="{{record.id}}">-</rich-text>
+      <text class="num">{{count}}</text>
+      <rich-text class="add" bindtap="add" data-fid="{{record.id}}">+</rich-text>
+    </view>
+    <text class="itemPrice">￥{{record.price}}</text>
+  </view>
+</view>
+<view class="evaluate">
+  <text>宝贝评价（{{num}}）</text>
+</view>
+<view class="tabbar" bindtap="addCart">
+  <text>加入购物车</text>
+  <image src='../../images/666.png' class="cart" bindtap='addCart' data-fid="{{record.id}}"></image>
+</view>

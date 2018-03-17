@@ -1,0 +1,88 @@
+/* pages/cart/cart.wxss */
+.itemList{
+  padding:20rpx;
+  margin-bottom:200rpx;
+}
+.cartRequired{
+  width:100%;
+  text-align: center;
+  padding:40rpx 0;
+}
+ .cartRequired>text{
+  color:#FA9603;
+} 
+.saleItem{
+  position: relative;
+  width:100%;
+  height:230rpx;
+}
+.check{
+  position: absolute;
+  top:50rpx;
+}
+.img{
+  position: absolute;
+  left:100rpx;
+  width:35%;
+  height:200rpx;
+}
+.title{
+  position: absolute;
+  top:20rpx;right:50rpx;
+  font-size: 48rpx;
+  color: #B9DABE;
+}
+.price{
+  font-size: 42rpx;
+  position: absolute;
+  right:200rpx;
+  top:110rpx;
+  color:#FA9603;
+}
+.count{
+  position: absolute;
+  right: 20rpx;
+  top:110rpx;
+}
+.minus,.add,.num{
+  display: inline-block;
+  text-align: center;
+  margin:0 10rpx;
+}
+.minus,.add{
+  background: #ddd;
+  width:50rpx;
+  border-radius: 5rpx;
+}
+.bottomBar{
+  width:100%;
+  height:50rpx;
+  position: fixed;
+  bottom:0;
+  background: #ddd;
+  padding:50rpx 20rpx;
+}
+.delIcon{
+  display: inline-block;
+  width:50rpx;
+  height:50rpx;
+  margin-left:20rpx;
+}
+.totalPrice{
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.totalPrice text{
+  color:#FA9603;
+}
+.btn{
+width:250rpx;
+height:70rpx;
+color:#747373;
+background: #B9DABE;
+font-size: 42rpx;
+line-height: 70rpx;
+position: absolute;
+right:80rpx;
+bottom:40rpx;
+}

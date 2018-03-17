@@ -1,0 +1,37 @@
+<!--pages/home/home.wxml-->
+<scroll-view scroll-y="false" bindscroll="scroll" scroll-top="{{scrollTop}}" bindscrolltolower="getMore" style="position:absolute; top:0; left:0; right:0; bottom:0">
+<view class="main">
+<image  src="{{userInfo.avatarUrl}}" class="bgImg"></image>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="userCtrl">
+  <view class="ctrlItem" style="border-right: 1px solid #fff;border-bottom: 1px solid #fff">
+   <navigator url="../order/order" open-type="navigate" > 
+  <image src="../../images/order.png"></image>
+  <text>我的订单</text>
+   </navigator> 
+  </view>
+  <view class="ctrlItem" style="border-bottom: 1px solid #fff">
+  <navigator url="../address/address" open-type="navigate" > 
+  <image src="../../images/address.png"></image>
+  <text>我的地址</text>
+  </navigator> 
+  </view>
+  <view class="ctrlItem"style="border-right: 1px solid #fff">
+  <navigator url="../coupon/coupon" open-type="navigate" > 
+  <image src="../../images/couponIcon.png"></image>
+  <text>优惠券</text>
+  </navigator> 
+  </view>
+  <view class="ctrlItem">
+  <image src="../../images/wechat.png"></image>
+  <button open-type="contact" class="custom">我的客服</button>
+  </view>
+  </view>
+</view>
+</scroll-view>

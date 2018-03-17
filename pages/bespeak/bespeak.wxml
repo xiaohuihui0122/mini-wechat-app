@@ -1,0 +1,41 @@
+<!--pages/bespeak/bespeak.wxml-->
+<view class="main">
+  <text class="chooseTitle">请选择日期</text>
+  <view class="flex-column dateList">
+    <view data-index="0" class="{{currentDate==0?'current':''}}" bindtap='chooseDate'>
+      <text>明天</text>
+      <text>{{dateList[0]}}</text>
+    </view>
+    <view data-index="1" class="{{currentDate==1?'current':''}}" bindtap='chooseDate' style="border-left:0">
+      <text>后天</text>
+      <text>{{dateList[1]}}</text>
+    </view>
+  </view>
+  <view class="section">
+    <picker mode="time" value="{{time}}" start="09:00" end="21:00" bindchange="bindTimeChange">
+      <view class="picker">
+        <text class="chooseTitle">请选择时间\n{{time}}</text>
+        <image src="../../images/bottom.png" style="width:5%;height:30rpx;margin-left:20rpx"></image>
+      </view>
+    </picker>
+  </view>
+  <text class="chooseTitle">请选择理发师</text>
+  <view id="panel" class="flex-column">
+    <block wx:for="{{barber}}" wx:for-index="idx" wx:key="unique">
+      <view class="flex-row" bindtap='chooseBarber' data-index="{{idx}}">
+        <text data-index="{{idx}}">{{item}}</text>
+        <view class="triangle" wx:if="{{isOn==idx}}">
+          <image src="../../images/correct.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+   <label class="chooseTitle">手机号：
+      <input placeholder="请输入手机号" bindinput="phoneInputEvent"></input>
+    </label>
+    <button class="btn getCode" bindtap="getCode" disabled='{{isDisabled}}'>获取验证码({{timer}})s</button>
+    <label class="chooseTitle">验证码：
+      <input placeholder="请输入验证码" bindinput="codeInputEvent"></input>
+    </label>
+  <button class="btn" bindtap="btnEvent">立即预约</button>
+</view>

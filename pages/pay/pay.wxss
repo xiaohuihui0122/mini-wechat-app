@@ -1,0 +1,103 @@
+.main{
+  background: #f6f6f6;
+  width:100%;
+  padding:50rpx 0;
+  margin:0;
+  position: relative;
+}
+.chooseAddr{
+  background: #f6f6f6;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  min-height: 1500rpx;
+  z-index:100;
+  text-align: center;
+}
+.currentAddr{
+  width:95%;
+  margin:0 auto;
+  border-radius: 5px;
+  background: #fff;
+}
+.currentAddr>view{
+  display: inline-block;
+  width:80%;
+}
+.addList>view{
+  width:90%;
+  margin:50rpx auto;
+  background: #fff;
+  border-radius:10rpx; 
+  padding:20rpx 0;
+}
+.addList>image,.currentAddr>image{
+  display: inline-block;
+  width:50rpx;
+  height:50rpx;
+  margin:0 0 50rpx 20rpx;
+}
+.addList>view>text,.currentAddr>view>text{
+  display: inline-block;
+  margin:20rpx;
+}
+.itemList{
+  background: #fff;
+  padding:20rpx;
+  margin:50rpx 0;
+}
+.saleItem{
+  position: relative;
+  width:100%;
+  height:230rpx;
+}
+.img{
+  position: absolute;
+  left:10rpx;
+  width:45%;
+  height:220rpx;
+}
+.title{
+  position: absolute;
+  top:20rpx;right:50rpx;
+  font-size: 48rpx;
+  color: #B9DABE;
+}
+.price{
+  font-size: 42rpx;
+  position: absolute;
+  right:100rpx;
+  top:110rpx;
+  color:#FA9603;
+}
+.orderInfo{
+  background: #fff;
+  margin-bottom:100rpx;
+  padding:20rpx;
+  line-height: 60rpx;
+}
+.orderInfo input{
+  display: inline-block;
+  width:80%;
+}
+.tabbar{
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background: #fff;  
+}
+.tabbar text{
+  color:#FA9603;
+}
+.tabbar button{
+  width:35%;
+  border-radius:0; 
+  background: #B9DABE;
+  color:#fff;
+  float:right;
+}
